@@ -9,8 +9,12 @@
     border: 5px solid black;
     text-align: center;
 }
-#left_in_div{
+#left_in_top_div{
   float: top;
+  width: 100%;
+}
+#sum_div{
+  width: 100%;
 }
 #left_div{
     padding: 10px;
