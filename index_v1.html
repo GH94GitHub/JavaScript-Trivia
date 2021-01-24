@@ -13,7 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet"> 
   <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/starter-template/">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
+  
   <!-- Bootstrap core CSS -->
 
   <style>
@@ -35,6 +35,7 @@
 
   <!-- Custom styles for this template -->
   <link href="starter-template.css" rel="stylesheet">
+  <link href="./stylesheet_ChoChang.css" rel="stylesheet">
 </head>
 <body>
 
@@ -68,31 +69,54 @@
 <!-- 1st Container -->
 <div class="container">
   <div class="alert alert-primary" role="alert">Group Project >> Fred Marble, George Henderson, & Perry Fulfs.</div>
+</div>
 
-  <div class="card" style="width: 18rem;">
+<div class="container">
+  <!--Question Numbers-->
+  <div class="col-2 questionNums offset-1" style="float:left">
+    <div class="row">
+      <span class="card col-6">1</span><span class="card col-6">2</span>
+    </div>
+    <div class="row">
+      <span class="card col-6">3</span><span class="card col-6">4</span>
+    </div>
+    <div class="row">
+      <span class="card col-6">5</span><span class="card col-6">6</span>
+    </div>
+    <div class="row">
+      <span class="card col-6">7</span><span class="card col-6">8</span>
+    </div>
+    <div class="row">
+      <span class="card col-6">9</span><span class="card col-6">10</span>
+    </div>
+    
+  </div>
+  
+  <!--Question-->
+  <div style="width: 18rem;" class="card">
     <div class="card-body">
       <h5 class="card-title">Question #1</h5>
       <p class="card-text">1. Inside which HTML element do we put the JavaScript?</p>
 
       <div class="list-group">
         <label class="list-group-item">
-          <input class="form-check-input me-1" type="checkbox" value="">
-          a) < javascript >
+          <input class="form-check-input me-1" type="radio" name="question" value="">
+          a) &lt;javascript&gt;
         </label>
         <label class="list-group-item">
-          <input class="form-check-input me-1" type="checkbox" value="">
-          b) < js >
+          <input class="form-check-input me-1" type="radio" name="question" value="">
+          b) &lt;js&gt;
         </label>
         <label class="list-group-item">
-          <input class="form-check-input me-1" type="checkbox" value="">
-          c) < script >
+          <input class="form-check-input me-1" type="radio" name="question" value="">
+          c) &lt;script&gt;
         </label>
         <label class="list-group-item">
-          <input class="form-check-input me-1" type="checkbox" value="">
-          d) < scripting >
+          <input class="form-check-input me-1" type="radio" name="question" value="">
+          d) &lt;scripting&gt;
         </label>
       </div>
-<br>
+      <br>
       <a href="#" class="btn btn-primary">Previous ?</a> <a href="#" class="btn btn-primary">Next ?</a>
     </div>
   </div>

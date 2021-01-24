@@ -70,6 +70,17 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
   margin-bottom: 20px;
 }
 
+.questionNums {
+  margin-right: 7%;
+}
+.questionNums div {
+  margin-bottom: .9px;
+}
+.questionNums span:hover {
+  cursor: pointer;
+  background-color:rgba(5,5,5,.3)
+}
+
 .col .row {
   margin-left: -0.75rem;
   margin-right: -0.75rem;
