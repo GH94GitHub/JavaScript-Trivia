@@ -1,0 +1,64 @@
+#things-learned{
+    padding: 10px;
+    font-family: 'Oswald', Verdana, Arial, sans-serif;
+    width: 45%;
+    float: right;
+    font-weight: 500;
+    border-radius: 15px;
+    border: 1px dashed red;
+}
+#movies-list{
+    padding: 10px;
+    font-family: 'Oswald', Verdana, Arial, sans-serif;
+    font-weight: 500;
+    width: 45%;
+    float: left;
+    border: 1px solid red;
+    border-radius: 15px;
+}
+/* nav style */
+.navbar {
+    color: #fff;
+    background-color: #946B2D;
+    min-height: 50px;
+  }
+  .nav_item{
+    font-family: 'Dancing Script', cursive;
+    color: #0e1a40;
+    font-size: 30px;
+  }
+  .navbar-wrapper {
+      position: relative;
+      height: 100%;
+  }
+
+  /*HTML & BODY Text Formatting*/
+  
+html,body{font-family: 'Dancing Script', cursive;; font-size:15px; line-height:1.5}
+
+
+h1{
+  font-size:36px;
+  color: #0e1a40;
+  font-family: 'Dancing Script', cursive;
+}
+h2{
+  font-size:30px;
+  color: 0e1a40;
+}
+h3{
+  font-size:24px;
+  color: 0e1a40;
+}
+h4{
+  font-size:20px;
+  color: 0e1a40;
+}
+h5{
+  font-size:18px;
+  color: 0e1a40;
+}
+h6{
+  font-size:16px;
+  color: 0e1a40;
+}  

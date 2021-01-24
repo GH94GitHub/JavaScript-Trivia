@@ -9,7 +9,7 @@ html,body{font-family: 'Dancing Script', cursive;; font-size:15px; line-height:1
 
 h1{
   font-size:36px;
-  color: 0e1a40;
+  color: #0e1a40;
   font-family: 'Dancing Script', cursive;
 }
 h2{
@@ -40,6 +40,11 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
   color: #fff;
   background-color: #946B2D;
   min-height: 50px;
+}
+.nav_item{
+  font-family: 'Dancing Script', cursive;
+  color: #0e1a40;
+  font-size: 30px;
 }
 .navbar-wrapper {
     position: relative;
