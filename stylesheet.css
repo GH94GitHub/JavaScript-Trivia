@@ -1,37 +1,81 @@
-#things-learned{
+/*Container Patterns*/
+#right_div{
     padding: 10px;
-    font-family: 'Oswald', Verdana, Arial, sans-serif;
+    font-family: 'Dancing Script', cursive;
     width: 45%;
     float: right;
     font-weight: 500;
     border-radius: 15px;
-    border: 1px dashed red;
+    border: 5px solid black;
+    text-align: center;
 }
-#movies-list{
+#left_in_div{
+  float: top;
+}
+#left_div{
     padding: 10px;
-    font-family: 'Oswald', Verdana, Arial, sans-serif;
+    font-family: 'Dancing Script', cursive;
     font-weight: 500;
     width: 45%;
     float: left;
-    border: 1px solid red;
+    border: 5px solid black;
     border-radius: 15px;
+    text-align: center;
+}
+#container{
+    position: relative;
+    width: 100%;
 }
 /* nav style */
 .navbar {
     color: #fff;
     background-color: #946B2D;
     min-height: 50px;
-  }
+    text-align: left;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    }
   .nav_item{
     font-family: 'Dancing Script', cursive;
     color: #0e1a40;
     font-size: 30px;
+    text-align: center;
   }
   .navbar-wrapper {
       position: relative;
       height: 100%;
   }
+/*Header & Footer Place Holder*/
 
+header{
+    background-color: #222F5b;
+    color: #946B2D;
+    height: 40px;  
+}
+#footer{
+    text-align:center;
+    float: right;
+    position: relative;
+    bottom: 0;
+    width: 100%;        
+}
+
+/*Table Style Sheet*/
+table{
+    border-radius: 15px;
+    border-width: 3px;
+    background-color: #5d5d5d;
+}
+tr{
+    text-align: center;
+}
+#quest_card{
+  padding: 10px;
+  text-align: center;
+  border: solid black;
+  border-width: 3px;
+  border-radius: 15px;
+}
   /*HTML & BODY Text Formatting*/
   
 html,body{font-family: 'Dancing Script', cursive;; font-size:15px; line-height:1.5}
@@ -41,24 +85,40 @@ h1{
   font-size:36px;
   color: #0e1a40;
   font-family: 'Dancing Script', cursive;
+  text-align: center;
 }
 h2{
   font-size:30px;
-  color: 0e1a40;
+  color: #0e1a40;
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
 }
 h3{
   font-size:24px;
-  color: 0e1a40;
+  color:  #0e1a40;
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
 }
 h4{
   font-size:20px;
-  color: 0e1a40;
+  color:  #0e1a40;
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
 }
 h5{
   font-size:18px;
-  color: 0e1a40;
+  color:  #0e1a40;
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
 }
 h6{
   font-size:16px;
-  color: 0e1a40;
+  color:  #0e1a40;
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
 }  
+p{
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    color: #0e1a40;
+}
