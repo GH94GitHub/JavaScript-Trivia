@@ -192,3 +192,16 @@ h6{
   font-family: 'Dancing Script', cursive;
   text-align: center;
 }  
+
+@media screen and ( max-width: 950px) {
+  #title {
+    width: 75%;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .logo {
+    width: 100px;
+  }
+
+}

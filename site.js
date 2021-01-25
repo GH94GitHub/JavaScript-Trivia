@@ -1,9 +1,10 @@
 window.addEventListener("load", function() {
 
+    /* Event Listeners */
     $('#quest_cards th').bind("click", function() {
         alert('This jumps you to question ' + $(this).html());
     });
-    
+        //Buttons
     $('#prevBtn').bind("click", function() {
         alert('Displays the previous question.')
     });
@@ -20,7 +21,8 @@ window.addEventListener("load", function() {
         switchView();        
     });
 
-    function switchView() {
+    /* Switches to show result summary, or question */ 
+        function switchView() {
         var q =$('#question');
         var results = $('#sum_div');
 
