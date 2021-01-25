@@ -1,8 +1,28 @@
 /*Container Patterns*/
+.logo {
+  width:150px;
+  vertical-align:middle;
+}
+.body {
+  width:39%;
+  margin-left:25%;
+}
+#title{
+  width:50%;
+  margin:auto;
+  vertical-align: center;
+  color:white;
+  font-size:3.5em;
+}
+#authors {
+  font-size:1.5em;
+}
 #right_div{
+  background-color: rgb(148, 107, 45); /**/
     padding: 10px;
+    font-size: 1.45em;
     font-family: 'Dancing Script', cursive;
-    width: 45%;
+    width: 65%;
     float: right;
     font-weight: 500;
     border-radius: 15px;
@@ -17,10 +37,12 @@
   width: 100%;
 }
 #left_div{
+  background-color:rgb(148, 107, 45);
+    color:'white';
     padding: 10px;
     font-family: 'Dancing Script', cursive;
     font-weight: 500;
-    width: 45%;
+    width:20%;
     float: left;
     border: 5px solid black;
     border-radius: 15px;
@@ -30,11 +52,29 @@
     position: relative;
     width: 100%;
 }
+#question{
+  text-align: center;
+  color: white;
+}
+#multipleChoice input {
+  color:white;
+  text-align: left;
+}
+
+/* controls */
+button {
+  border-radius: 30px;
+}
+button:focus {
+  border-color: rgb(25, 245, 5);
+}
+
 /* nav style */
 .navbar {
     color: #fff;
     background-color: #946B2D;
     min-height: 50px;
+    height:15%;
     text-align: left;
     display: grid;
     grid-template-columns: auto auto auto;
@@ -44,13 +84,22 @@
     color: #0e1a40;
     font-size: 30px;
     text-align: center;
+    border:2px solid rgba('255,255,255,.0');
+    border-radius:25px;
+    box-shadow: 1px 1px 5px rgba('255,255,255,.0');
+  }
+  .nav_item:hover h4{
+    color: #0e1a40;
+    border:2px solid #0e1a40;
+    border-radius:25px;
+    box-shadow: -.6px -.6px 1px black;
   }
   .navbar-wrapper {
       position: relative;
       height: 100%;
   }
-/*Header & Footer Place Holder*/
 
+/*Header & Footer Place Holder*/
 header{
     background-color: #222F5b;
     color: #946B2D;
@@ -66,63 +115,80 @@ header{
 
 /*Table Style Sheet*/
 table{
+    margin:auto;
     border-radius: 15px;
     border-width: 3px;
     background-color: #5d5d5d;
 }
-tr{
-    text-align: center;
+tbody {
+  margin:auto;
 }
-#quest_card{
+
+#quest_cards {
+  background-color: rgba(148, 107, 45, .0);
+}
+#quest_cards th{
   padding: 10px;
+  width:50%;
   text-align: center;
-  border: solid black;
+  border: solid rgb(90, 65, 26);
   border-width: 3px;
-  border-radius: 15px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+#quest_cards th:hover {
+  background-color: rgba(148, 107, 45, .7);
+  color:white;
+  border-color:black;
+  -webkit-box-shadow: -1px -1px 2px rgba('0, 0, 0, .4');
+        box-shadow: 2px 2px 2px rgba('0, 0, 0, .4');
 }
   /*HTML & BODY Text Formatting*/
-  
-html,body{font-family: 'Dancing Script', cursive;; font-size:15px; line-height:1.5}
+html {
+  background-color:#5d5d5d;
+}
+html,body{
+  font-family: 'Dancing Script', cursive;
+  font-size:15px;
+  line-height:1.5
+}
 
 
 h1{
   font-size:36px;
-  color: #0e1a40;
+  color: white;
   font-family: 'Dancing Script', cursive;
   text-align: center;
+
+  text-shadow: 3px 3px 2px rgb(30, 30, 30);
 }
 h2{
   font-size:30px;
-  color: #0e1a40;
+  color: white;
   font-family: 'Dancing Script', cursive;
   text-align: center;
 }
 h3{
   font-size:24px;
-  color:  #0e1a40;
+  color:  white;
   font-family: 'Dancing Script', cursive;
   text-align: center;
 }
 h4{
   font-size:20px;
-  color:  #0e1a40;
+  color:  white;
   font-family: 'Dancing Script', cursive;
   text-align: center;
 }
 h5{
   font-size:18px;
-  color:  #0e1a40;
+  color:  white;
   font-family: 'Dancing Script', cursive;
   text-align: center;
 }
 h6{
   font-size:16px;
-  color:  #0e1a40;
+  color:  white;
   font-family: 'Dancing Script', cursive;
   text-align: center;
 }  
-p{
-    font-family: 'Dancing Script', cursive;
-    text-align: center;
-    color: #0e1a40;
-}

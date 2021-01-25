@@ -19,7 +19,7 @@
         </div>
         <div class="nav_item"> 
             <figure>
-                <a href=""><h5>Home</h5></a>
+                <a href=""><h4>Home</h4></a>
             </figure>
         </div>
     </div>
@@ -28,92 +28,127 @@
 <body>
     <div id="container">
         <div id="header">        
-            <h1>Group Project >> Fred Marble, George Henderson, & Perry Fulfs.</h1>
+            <h1 id="authors">Group Project >> Fred Marble, George Henderson, & Perry Fulfs.</h1>
+            <hr>
         </div>
         <br>
-            <h1>JavaScript Trivia</h1>
-            <h5>Single Page Application using Knockout.js</h5>
-            <div id="left_div">
-                <div id="left_in_div">
-                    <table>
-                        <tr><th id="quest_card">1</th><th id="quest_card">2</th><th id="quest_card">3</th><th id="quest_card">4</th><th id="quest_card">5</th>
-                        <th id="quest_card">6</th><th id="quest_card">7</th><th id="quest_card">8</th><th id="quest_card">9</th><th id="quest_card">10</th></tr>
-                    </table>
-                  <!-- <span class="card col-6">1</span><span class="card col-6">2</span>
-                    </div>
-                    <div class="row">
-                      <span class="card col-6">3</span><span class="card col-6">4</span>
-                    </div>
-                    <div class="row">
-                      <span class="card col-6">5</span><span class="card col-6">6</span>
-                    </div>
-                    <div class="row">
-                      <span class="card col-6">7</span><span class="card col-6">8</span>
-                    </div>
-                    <div class="row">
-                      <span class="card col-6">9</span><span class="card col-6">10</span>
-                    </div>--> 
-                 </div>
-                <h3>Provide a summary of the results and include the following:</h3>
-                <div id="sum_div">
-               <table>
-                    <thead>
-                       <tr>
-                           <th scope="col">Summary</th>
-                           <th scope="col">Results</th>
-                       </tr>
-                    </thead>
-                    <tbody>
-                       <tr>
-                           <th scope="row">Rank</th>
-                           <td>12th</td>
-                       </tr>
-                       <tr>
-                           <th scope="row">Score</th>
-                           <td>36</td>
-                       </tr>
-                       <tr>
-                           <th scope="row">Questions</th>
-                           <td>What are the questions?</td>
-                       </tr>
-                       <tr>
-                           <th scope="row">Answers</th>
-                           <td>What are the answers?</td>
-                       </tr>
-                       <tr>
-                           <th scope="row">Correct Answers</th>
-                           <td>What are the correct answers?</td>
-                       </tr>
-                   </tbody>
-               </table>
+            <div>
+                <div id="title">
+                    <img class="logo" style="float:left;" src="images/raven-claw-logo.png">
+                    <h1 style="display:inline">JavaScript Trivia</h1>
+                    <img class="logo" src="images/raven-claw-logo.png">
+                </div>
             </div>
-         </div>
-        <div id="right_div">
-            <h5>Question #1</h5>
-            <p>1. Inside which HTML element do we put the JavaScript?</p>
-                <label class="list-group-item">
-                <input class="form-check-input me-1" type="radio" name="question" value="">
-                a) &lt;javascript&gt;
-                </label>
-                <label class="list-group-item">
-                <input class="form-check-input me-1" type="radio" name="question" value="">
-                b) &lt;js&gt;
-                </label>
-                <label class="list-group-item">
-                <input class="form-check-input me-1" type="radio" name="question" value="">
-                c) &lt;script&gt;
-                </label>
-                <label class="list-group-item">
-                <input class="form-check-input me-1" type="radio" name="question" value="">
-                d) &lt;scripting&gt;
-                </label>
-        </div>
-      
+
+            <h5>Single Page Application using Knockout.js</h5>
+            <div class="body">
+                <div id="left_div">
+                    <div id="left_in_div">
+                        <table id="quest_cards">
+                            <tr>
+                                <th>1</th>
+                                <th>2</th>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <th>4</th>
+                            </tr>
+                            <tr>
+                                <th>5</th>
+                                <th>6</th>
+                            </tr>
+                            <tr>
+                                <th>7</th>
+                                <th>8</th>
+                            </tr>
+                            <tr>
+                                <th>9</th>
+                                <th>10</th>
+                            </tr>
+                        </table>
+                    </div>               
+                </div>
+            
+         
+                <div id="right_div">
+                    <div id="sum_div" style="display: none;">
+                        <h3>Provide a summary of the results and include the following:</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Summary</th>
+                                    <th scope="col">Results</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Rank</th>
+                                    <td>12th</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Score</th>
+                                    <td>36</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Questions</th>
+                                    <td>What are the questions?</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Answers</th>
+                                    <td>What are the answers?</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Correct Answers</th>
+                                    <td>What are the correct answers?</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button id="backBtn">Go Back to questions</button>
+                    </div>
+                    <div id="question">
+                        <h5>Question #1</h5>
+                        <p id="question">1. Inside which HTML element do we put the JavaScript?</p>
+                        <table id="multipleChoice">
+                            <tr>
+                                <td><label>
+                                <input class="form-check-input me-1" type="radio" name="question" value="">
+                                    a) &lt;javascript&gt;
+                                </label></td>
+                            </tr>
+                            <tr>
+                                <td><label>
+                                <input class="form-check-input me-1" type="radio" name="question" value="">
+                                    b) &lt;js&gt;
+                                </label></td>
+                            </tr>
+                            <tr>
+                                <td><label>
+                                <input class="form-check-input me-1" type="radio" name="question" value="">
+                                    c) &lt;script&gt;
+                                </label></td>
+                            </tr>
+                            <tr>
+                                <td><label>
+                                <input class="form-check-input me-1" type="radio" name="question" value="">
+                                d) &lt;scripting&gt;
+                                </label></td>
+                            </tr>
+                        </table>
+                    
+                        <div>
+                            <button id="prevBtn" type="button" value="&lt; Previous>">&lt;  Previous</button>
+                            <button id="nextBtn" type="button" value="Next &gt;">Next &gt;</button>
+                            <button id="finishBtn">Turn in your paper</button>
+                        </div>
+                    </div><!--End of #question-->
+                </div> <!--End of #right_div-->
+            </div> <!--End of #body-->
     </div>
     
     <div id="footer">
         <h5>&copy; Copyright 2021 F. Marble, G. Henderson, P. Fulfs</h5>
     </div>
-
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./site.js"></script>
 </html>
