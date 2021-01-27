@@ -4,8 +4,10 @@
   vertical-align:middle;
 }
 .body {
-  width:39%;
+  max-width: 60%;
   margin-left:25%;
+  display:flex;
+  align-items: center;
 }
 #title{
   width:50%;
@@ -18,7 +20,8 @@
   font-size:1.5em;
 }
 #right_div{
-  background-color: rgb(148, 107, 45); /**/
+  background-color: rgb(148, 107, 45);
+  margin: 0 20px;
     padding: 10px;
     font-size: 1.45em;
     font-family: 'Dancing Script', cursive;
@@ -84,11 +87,9 @@ button:focus {
     color: #0e1a40;
     font-size: 30px;
     text-align: center;
-    border:2px solid rgba('255,255,255,.0');
-    border-radius:25px;
-    box-shadow: 1px 1px 5px rgba('255,255,255,.0');
+    border-radius:1px;
   }
-  .nav_item:hover h4{
+  .nav_item:hover h4{ /* test h4*/
     color: #0e1a40;
     border:2px solid #0e1a40;
     border-radius:25px;
@@ -143,6 +144,12 @@ tbody {
   -webkit-box-shadow: -1px -1px 2px rgba('0, 0, 0, .4');
         box-shadow: 2px 2px 2px rgba('0, 0, 0, .4');
 }
+
+.center_content {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
   /*HTML & BODY Text Formatting*/
 html {
   background-color:#5d5d5d;
@@ -193,6 +200,7 @@ h6{
   text-align: center;
 }  
 
+/* Media */
 @media screen and ( max-width: 950px) {
   #title {
     width: 75%;
