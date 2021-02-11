@@ -7,6 +7,7 @@
   max-width: 60%;
   margin-left:25%;
   display:flex;
+  flex-direction: row;
   align-items: center;
 }
 #title{
@@ -41,11 +42,9 @@
 }
 #left_div{
   background-color:rgb(148, 107, 45);
-    color:'white';
     padding: 10px;
     font-family: 'Dancing Script', cursive;
     font-weight: 500;
-    width:20%;
     float: left;
     border: 5px solid black;
     border-radius: 15px;
@@ -148,7 +147,6 @@ tbody {
 .center_content {
   display:flex;
   justify-content: center;
-  align-items: center;
 }
   /*HTML & BODY Text Formatting*/
 html {
@@ -200,7 +198,30 @@ h6{
   text-align: center;
 }  
 
+
+#left_in_div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#left_in_div div {
+  width: 10px;
+  flex: 0 0 40%;
+}
+
 /* Media */
+@media screen and ( max-width: 700px) {
+  #left_in_div {
+    flex-wrap: nowrap;
+  }
+  #left_in_div div {
+    flex:1 0 9%;
+  }
+  .body {
+    flex-direction: column;
+  };
+} 
+
 @media screen and ( max-width: 950px) {
   #title {
     width: 75%;
@@ -211,5 +232,4 @@ h6{
   .logo {
     width: 100px;
   }
-
 }
