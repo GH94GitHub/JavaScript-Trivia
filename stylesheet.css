@@ -3,9 +3,9 @@
   width:150px;
   vertical-align:middle;
 }
-.body {
+.body-panel {
   max-width: 60%;
-  margin-left:25%;
+  margin: auto;
   display:flex;
   flex-direction: row;
   align-items: center;
