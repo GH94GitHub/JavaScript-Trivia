@@ -1,6 +1,7 @@
 /*Container Patterns*/
 .logo {
   width:150px;
+  height: auto;
   vertical-align:middle;
 }
 .body-panel {
@@ -45,7 +46,6 @@
     padding: 10px;
     font-family: 'Dancing Script', cursive;
     font-weight: 500;
-    /*float: left;*/ 
     border: 5px solid black;
     border-radius: 15px;
     text-align: center;
@@ -229,6 +229,8 @@ h6{
     flex-wrap: nowrap;
   }
   #left_in_div div {
+    width: 15px;
+    margin: 2px;
     flex:1 0 6%;
   }
   .body-panel {

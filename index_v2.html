@@ -44,16 +44,16 @@
             <div class="body-panel">
                 <div id="left_div">
                     <div id="left_in_div">
-                        <div>1</div>
-                        <div>2</div>
-                        <div>3</div>
-                        <div>4</div>
-                        <div>5</div>
-                        <div>6</div>
-                        <div>7</div>
-                        <div>8</div>
-                        <div>9</div>
-                        <div>10</div>
+                        <div id="quickNav1">1</div>
+                        <div id="quickNav2">2</div>
+                        <div id="quickNav3">3</div>
+                        <div id="quickNav4">4</div>
+                        <div id="quickNav5">5</div>
+                        <div id="quickNav6">6</div>
+                        <div id="quickNav7">7</div>
+                        <div id="quickNav8">8</div>
+                        <div id="quickNav9">9</div>
+                        <div id="quickNav10">10</div>
 
                         <!--<table id="quest_cards">
                             <tr>
@@ -82,7 +82,7 @@
             
          
                 <div id="right_div">
-                    <div id="sum_div" style="display: none;">
+                    <div id="sum_div" style="display: none;" data-bind="style: { display: done() ? 'block' : 'none' }">
                         <h3>Provide a summary of the results and include the following:</h3>
                         <table>
                             <thead>
@@ -116,9 +116,9 @@
                         </table>
                         <button id="backBtn">Go Back to questions</button>
                     </div>
-                    <div id="question">
+                    <div id="question" data-bind="style: { display: done() ? 'none' : 'block' }">
                         <h5 data-bind="text: question.title">Question #1</h5>
-                        <p id="question" data-bind="text: question.text">1. Inside which HTML element do we put the JavaScript?</p>
+                        <p id="question" data-bind="text: question.text">Inside which HTML element do we put the JavaScript?</p>
                         <table id="multipleChoice">
                             <tr>
                                 <td><label>
@@ -146,7 +146,7 @@
                             </tr>
                         </table>
                     
-                        <div>
+                        <div class="btnHolder">
                             <button id="prevBtn" type="button" value="&lt; Previous>">&lt;  Previous</button>
                             <button id="nextBtn" type="button" value="Next &gt;">Next &gt;</button>
                             <button id="finishBtn">Turn in your paper</button>
