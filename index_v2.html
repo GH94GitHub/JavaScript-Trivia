@@ -117,31 +117,31 @@
                         <button id="backBtn">Go Back to questions</button>
                     </div>
                     <div id="question">
-                        <h5 data-bind="text: question.title">Question #1</h5>
-                        <p id="question" data-bind="text: question.text">1. Inside which HTML element do we put the JavaScript?</p>
+                        <h5 data-bind="text: question.title"></h5>
+                        <p id="question" data-bind="text: question.text"></p>
                         <table id="multipleChoice">
                             <tr>
                                 <td><label>
                                 <input class="form-check-input me-1" type="radio" name="question" value="">
-                                    <span data-bind="text: question.multipleChoice.a1">a) &lt;javascript&gt;</span>
+                                a) <span data-bind="text: question.multipleChoice.a1"></span>
                                 </label></td>
                             </tr>
                             <tr>
                                 <td><label>
                                 <input class="form-check-input me-1" type="radio" name="question" value="">
-                                <span data-bind="text: question.multipleChoice.a2">b) &lt;js&gt;</span>
+                                b) <span data-bind="text: question.multipleChoice.a2"></span>
                                 </label></td>
                             </tr>
                             <tr>
                                 <td><label>
                                 <input class="form-check-input me-1" type="radio" name="question" value="">
-                                <span data-bind="text: question.multipleChoice.a3">c) &lt;script&gt;</span>
+                                c) <span data-bind="text: question.multipleChoice.a3"></span>
                                 </label></td>
                             </tr>
                             <tr>
                                 <td><label>
                                 <input class="form-check-input me-1" type="radio" name="question" value="">
-                                <span data-bind="text: question.multipleChoice.a4">d) &lt;scripting&gt;</span>
+                                d) <span data-bind="text: question.multipleChoice.a4"></span>
                                 </label></td>
                             </tr>
                         </table>
@@ -164,5 +164,5 @@
 <!-- JavaScript-->
 <script src="./knockout-3.5.1.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="./site.js" type="module"></script>
+<script src="./site.js"></script>
 </html>
