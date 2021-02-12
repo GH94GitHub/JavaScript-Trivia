@@ -9,6 +9,7 @@
   display:flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 #title{
   width:50%;
@@ -26,8 +27,7 @@
     padding: 10px;
     font-size: 1.45em;
     font-family: 'Dancing Script', cursive;
-    width: 65%;
-    float: right;
+    width: 40%;
     font-weight: 500;
     border-radius: 15px;
     border: 5px solid black;
@@ -45,7 +45,7 @@
     padding: 10px;
     font-family: 'Dancing Script', cursive;
     font-weight: 500;
-    float: left;
+    /*float: left;*/ 
     border: 5px solid black;
     border-radius: 15px;
     text-align: center;
@@ -58,14 +58,19 @@
   text-align: center;
   color: white;
 }
+#multipleChoice {
+  text-align: left;
+}
 #multipleChoice input {
   color:white;
-  text-align: left;
 }
 
 /* controls */
 button {
   border-radius: 30px;
+}
+button:hover {
+  cursor: pointer;
 }
 button:focus {
   border-color: rgb(25, 245, 5);
@@ -205,30 +210,43 @@ h6{
   flex-wrap: wrap;
 }
 #left_in_div div {
-  width: 10px;
+  width: 5px;
+  margin: 4px;
+  border: 1px solid black;
+  border-radius: 15px;
   flex: 0 0 40%;
+}
+#left_in_div div:hover {
+  border: 1px solid white;
+  background-color: #222F5b;
+  color: white;
+  cursor: pointer;
 }
 
 /* Media */
-@media screen and ( max-width: 700px) {
+@media only screen and ( max-width: 700px) {
   #left_in_div {
     flex-wrap: nowrap;
   }
   #left_in_div div {
-    flex:1 0 9%;
+    flex:1 0 6%;
   }
   .body-panel {
     flex-direction: column;
-  };
+  }
 } 
 
-@media screen and ( max-width: 950px) {
+@media only screen and ( max-width: 950px) {
+  .body-panel {
+    max-width: 100%;
+  }
+
   #title {
     width: 75%;
     margin: auto;
   }
 }
-@media screen and (max-width: 1120px) {
+@media only screen and (max-width: 1120px) {
   .logo {
     width: 100px;
   }
