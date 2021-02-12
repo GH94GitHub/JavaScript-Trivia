@@ -117,31 +117,31 @@
                         <button id="backBtn">Go Back to questions</button>
                     </div>
                     <div id="question">
-                        <h5>Question #1</h5>
-                        <p id="question">1. Inside which HTML element do we put the JavaScript?</p>
+                        <h5 data-bind="text: question.title">Question #1</h5>
+                        <p id="question" data-bind="text: question.text">1. Inside which HTML element do we put the JavaScript?</p>
                         <table id="multipleChoice">
                             <tr>
                                 <td><label>
                                 <input class="form-check-input me-1" type="radio" name="question" value="">
-                                    a) &lt;javascript&gt;
+                                    <span data-bind="text: question.multipleChoice.a1">a) &lt;javascript&gt;</span>
                                 </label></td>
                             </tr>
                             <tr>
                                 <td><label>
                                 <input class="form-check-input me-1" type="radio" name="question" value="">
-                                    b) &lt;js&gt;
+                                <span data-bind="text: question.multipleChoice.a2">b) &lt;js&gt;</span>
                                 </label></td>
                             </tr>
                             <tr>
                                 <td><label>
                                 <input class="form-check-input me-1" type="radio" name="question" value="">
-                                    c) &lt;script&gt;
+                                <span data-bind="text: question.multipleChoice.a3">c) &lt;script&gt;</span>
                                 </label></td>
                             </tr>
                             <tr>
                                 <td><label>
                                 <input class="form-check-input me-1" type="radio" name="question" value="">
-                                d) &lt;scripting&gt;
+                                <span data-bind="text: question.multipleChoice.a4">d) &lt;scripting&gt;</span>
                                 </label></td>
                             </tr>
                         </table>
