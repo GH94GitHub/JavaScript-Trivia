@@ -217,7 +217,7 @@ h6{
   #left_in_div div {
     flex:1 0 9%;
   }
-  .body {
+  .body-panel {
     flex-direction: column;
   };
 } 
