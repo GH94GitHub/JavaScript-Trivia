@@ -5,7 +5,7 @@
   vertical-align:middle;
 }
 .body-panel {
-  max-width: 60%;
+  max-width: 75%; /* PF - widened to accomodate longer questions */
   margin: auto;
   display:flex;
   flex-direction: row;
@@ -13,7 +13,7 @@
   justify-content: center;
 }
 #title{
-  width:50%;
+  width:75%;
   margin:auto;
   vertical-align: center;
   color:white;
@@ -25,30 +25,31 @@
 #right_div{
   background-color: rgb(148, 107, 45);
   margin: 0 20px;
-    padding: 10px;
-    font-size: 1.45em;
-    font-family: 'Dancing Script', cursive;
-    width: 40%;
-    font-weight: 500;
-    border-radius: 15px;
-    border: 5px solid black;
-    text-align: center;
+  padding: 10px;
+  font-size: 1.45em;
+  font-family: 'Dancing Script', cursive;
+  width: 50%;
+  font-weight: 500;
+  border-radius: 15px;
+  border: 5px solid black;
+  text-align: center;
 }
 #left_in_top_div{
   float: top;
   width: 100%;
 }
 #sum_div{
+  color: #fff;
   width: 100%;
 }
 #left_div{
   background-color:rgb(148, 107, 45);
-    padding: 10px;
-    font-family: 'Dancing Script', cursive;
-    font-weight: 500;
-    border: 5px solid black;
-    border-radius: 15px;
-    text-align: center;
+  padding: 10px;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 500;
+  border: 5px solid black;
+  border-radius: 15px;
+  text-align: center;
 }
 #container{
     position: relative;
@@ -58,22 +59,32 @@
   text-align: center;
   color: white;
 }
-#multipleChoice {
+#multipleChoice { /* PF - edited style to be more readible */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .8em;
   text-align: left;
 }
 #multipleChoice input {
   color:white;
 }
 
-/* controls */
+/* controls --- PF - edited spacing & button size */
+.btnHolder {
+  margin: 10px 0;
+}
 button {
-  border-radius: 30px;
+  border-radius: 20px;
+  padding: 5px 10px;
 }
 button:hover {
+  background-color: #222F5b;
+  color: #fff;
   cursor: pointer;
 }
 button:focus {
-  border-color: rgb(25, 245, 5);
+}
+#backBtn {
+  margin: 10px 0;
 }
 
 /* nav style */
@@ -93,11 +104,11 @@ button:focus {
     text-align: center;
     border-radius:1px;
   }
-  .nav_item:hover h4{ /* test h4*/
+  .nav_item:hover h4{ /* test h4 --- PF - edited border was making page jump on hover */
     color: #0e1a40;
-    border:2px solid #0e1a40;
+    /* border:2px solid #0e1a40;
     border-radius:25px;
-    box-shadow: -.6px -.6px 1px black;
+    box-shadow: -.6px -.6px 1px black;  */
   }
   .navbar-wrapper {
       position: relative;
@@ -120,10 +131,11 @@ header{
 
 /*Table Style Sheet*/
 table{
-    margin:auto;
     border-radius: 15px;
     border-width: 3px;
     background-color: #5d5d5d;
+    margin:auto;
+    padding: 5px 10px; /* PF - added padding */
 }
 tbody {
   margin:auto;

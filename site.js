@@ -15,101 +15,101 @@ var questionBank = {
 },
 '2': {
     title: 'Question #2',
-    text: 'q2',
-    getCorrectAnswer: function() { return },
+    text: 'Which of the following are capabilities of functions in JavaScript?',
+    getCorrectAnswer: function() { return this.multipleChoice[3] },
     multipleChoice: {
-        '1': '',
-        '2': '',
-        '3': '',
-        '4': ''
+        '1': 'Return a value',
+        '2': 'Accept parameters and Return a value',
+        '3': 'Accept parameters',
+        '4': 'None of the above'
     }
 },
 '3': {
     title: 'Question #3',
-    text: 'q3',
-    getCorrectAnswer: function() { return },
+    text: 'Which of the following attribute can hold the JavaScript version?',
+    getCorrectAnswer: function() { return this.multipleChoice[1] },
     multipleChoice: {
-        '1': '',
-        '2': '',
-        '3': '',
-        '4': ''
+        '1': 'LANGUAGE',
+        '2': 'SCRIPT',
+        '3': 'VERSION',
+        '4': 'None of the above'
     }
 },
 '4': {
     title: 'Question #4',
-    text: 'q4',
-    getCorrectAnswer: function() { return },
+    text: 'What is the correct syntax for referring to an external script called " abc.js"?',
+    getCorrectAnswer: function() { return this.multipleChoice[3] },
     multipleChoice: {
-        '1': '',
-        '2': '',
-        '3': '',
-        '4': ''
+        '1': '<script href=" abc.js">',
+        '2': '<script name=" abc.js">',
+        '3': '<script src=" abc.js">',
+        '4': 'None of the above'
     }
 },
 '5': {
     title: 'Question #5',
-    text: '',
-    getCorrectAnswer: function() { return },
+    text: 'Which of the following best describes JavaScript?',
+    getCorrectAnswer: function() { return this.multipleChoice[4] },
     multipleChoice: {
-        '1': '',
-        '2': '',
-        '3': '',
-        '4': ''
+        '1': 'a low-level programming language.',
+        '2': 'a scripting language precompiled in the browser.',
+        '3': 'a compiled scripting language.',
+        '4': 'an object-oriented scripting language.'
     }
 },
 '6': {
     title: 'Question #6',
-    text: '',
-    getCorrectAnswer: function() { return },
+    text: 'Which of the following is not considered a JavaScript operator?',
+    getCorrectAnswer: function() { return this.multipleChoice[2] },
     multipleChoice: {
-        '1': '',
-        '2': '',
-        '3': '',
-        '4': ''
+        '1': 'new',
+        '2': 'this',
+        '3': 'delete',
+        '4': 'typeof'
     }
 },
 '7': {
     title: 'Question #7',
-    text: '',
-    getCorrectAnswer: function() { return },
+    text: 'What is the correct JavaScript syntax to write "Hello World"?',
+    getCorrectAnswer: function() { return this.multipleChoice[3] },
     multipleChoice: {
-        '1': '',
-        '2': '',
-        '3': '',
-        '4': ''
+        '1': 'System.out.println("Hello World")',
+        '2': 'println ("Hello World")',
+        '3': 'document.write("Hello World")',
+        '4': 'response.write("Hello World")'
     }
 },
 '8': {
     title: 'Question #8',
-    text: '',
-    getCorrectAnswer: function() { return },
+    text: 'JavaScript is interpreted by _________',
+    getCorrectAnswer: function() { return this.multipleChoice[1] },
     multipleChoice: {
-        '1': '',
-        '2': '',
-        '3': '',
-        '4': ''
+        '1': 'Client',
+        '2': 'Server',
+        '3': 'Object',
+        '4': 'None of the above'
     }
 },
 '9': {
     title: 'Question #9',
-    text: '',
-    getCorrectAnswer: function() { return },
+    text: 'To automatically open the console when a JavaScript error occurs which of the following is added to prefs.js?',
+    getCorrectAnswer: function() { return this.multipleChoice[4] },
     multipleChoice: {
-        '1': '',
-        '2': '',
-        '3': '',
-        '4': ''
+        '1': 'user_pref(" javascript.console.open_on_error", false);',
+        '2': 'user_pref("javascript.console.open_error ", true);',
+        '3': 'user_pref("javascript.console.open_error ", false);',
+        '4': 'user_pref("javascript.console.open_on_error", true);'
     }
 },
 '10': {
     title: 'Question #10',
-    text: '',
-    getCorrectAnswer: function() { return },
+    text: 'Which is the correct way to write a JavaScript array?',
+    getCorrectAnswer: function() { return this.multipleChoice[3] },
     multipleChoice: {
-        '1': '',
-        '2': '',
-        '3': '',
-        '4': ''
+        '1': 'var txt = new Array(1:"tim",2:"kim",3:"jim")',
+        '2': 'var txt = new Array:1=("tim")2=("kim")3=("jim")',
+        '3': 'var txt = new Array("tim","kim","jim")',
+        '4': 'var txt = new Array="tim","kim","jim"'
     }
 }
 };
