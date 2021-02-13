@@ -81,8 +81,6 @@ button:hover {
   color: #fff;
   cursor: pointer;
 }
-button:focus {
-}
 #backBtn {
   margin: 10px 0;
 }
