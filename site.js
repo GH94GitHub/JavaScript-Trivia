@@ -309,6 +309,6 @@ window.addEventListener("load", function() {
     });
 
     $('#backBtn').bind("click", function() { // Reset Game
-        window.location = '/index_v2.html';  
+        window.location.reload(); 
     });
 });
