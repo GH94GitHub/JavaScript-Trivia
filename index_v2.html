@@ -54,69 +54,34 @@
                         <div id="quickNav8">8</div>
                         <div id="quickNav9">9</div>
                         <div id="quickNav10">10</div>
-
-                        <!--<table id="quest_cards">
-                            <tr>
-                                <th>1</th>
-                                <th>2</th>
-                            </tr>
-                            <tr>
-                                <th>3</th>
-                                <th>4</th>
-                            </tr>
-                            <tr>
-                                <th>5</th>
-                                <th>6</th>
-                            </tr>
-                            <tr>
-                                <th>7</th>
-                                <th>8</th>
-                            </tr>
-                            <tr>
-                                <th>9</th>
-                                <th>10</th>
-                            </tr>
-                        </table> -->
                     </div>   
                 </div> <!-- End of left_div -->
             
          
                 <div id="right_div">
-                    <div id="sum_div" style="display: none;" data-bind="style: { display: done() ? 'block' : 'none' }">
+                    <div id="sum_div" style="display: none;" data-bind="style: { display: grade.showGrade() ? 'block' : 'none' }">
                         <h3>Summary of the results:</h3>
-                        <table>
+                        <table style="text-align: left;">
                             <thead>
                                 <tr>
-                                    <th scope="col">Summary</th>
-                                    <th scope="col">Results</th>
+                                    <th scope="col">Summary: </th>
+                                    <th scope="col" data-bind="text: grade.summary()"></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th scope="row">Rank</th>
-                                    <td>12th</td>
+                                    <th scope="row">Rank: </th>
+                                    <td data-bind="text: grade.rank()"></td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">Score</th>
-                                    <td>36</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Questions</th>
-                                    <td>What are the questions?</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Answers</th>
-                                    <td>What are the answers?</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Correct Answers</th>
-                                    <td>What are the correct answers?</td>
+                                    <th scope="row">Score: </th>
+                                    <td data-bind="text: grade.score()"></td>
                                 </tr>
                             </tbody>
                         </table>
-                        <button id="backBtn">Go Back to questions</button>
+                        <button id="backBtn">Reset Trivia</button>
                     </div>
-                    <div id="question" data-bind="style: { display: done() ? 'none' : 'block' }">
+                    <div id="question" data-bind="style: { display: grade.showGrade() ? 'none' : 'block' }">
                         <h5 data-bind="text: question.title">Question #1</h5>
                         <p id="question" data-bind="text: question.text">Inside which HTML element do we put the JavaScript?</p>
                         <table id="multipleChoice">
@@ -149,7 +114,7 @@
                         <div class="btnHolder">
                             <button id="prevBtn" type="button" value="&lt; Previous>">&lt;  Previous</button>
                             <button id="nextBtn" type="button" value="Next &gt;">Next &gt;</button>
-                            <button id="finishBtn">Turn in your paper</button>
+                            <button id="finishBtn" data-bind="text: grade.graded() ? 'Back to summary' : 'Turn in your paper'">Turn in your paper</button>
                         </div>
                     </div><!--End of #question-->
                 </div> <!--End of #right_div-->

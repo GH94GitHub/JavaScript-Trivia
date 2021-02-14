@@ -52,7 +52,7 @@ var questionBank = {
     getCorrectAnswer: function() { return this.multipleChoice[4] },
     multipleChoice: {
         '1': 'a low-level programming language.',
-        '2': 'a scripting language precompiled in the browser.',
+        '2': 'a scripting language pre-compiled in the browser.',
         '3': 'a compiled scripting language.',
         '4': 'an object-oriented scripting language.'
     }
@@ -120,7 +120,6 @@ var storedAnswers = {
 
 // ViewModel
 var ViewModel = {
-    done: ko.observable(false),
     question: {
         title: ko.observable(questionBank[1].title),
         text: ko.observable(questionBank[1].text),
@@ -130,8 +129,13 @@ var ViewModel = {
             a3: ko.observable(questionBank[1].multipleChoice[3]),
             a4: ko.observable(questionBank[1].multipleChoice[4])
         }
-
-        // Holds question information
+    },
+    grade: {
+        graded: ko.observable(false),
+        showGrade: ko.observable(false),
+        summary: ko.observable(),
+        rank: ko.observable(),
+        score: ko.observable()
     }
 };
 
@@ -182,15 +186,67 @@ var ViewModel = {
         }
     }
 
+    /**
+     * Checks given question and returns boolean depending on correct/incorrect.
+     * Param (integer 1-10)
+     */
+    function checkAnswer(questionNum) {
+        if (storedAnswers[questionNum] && storedAnswers[questionNum].answer === questionBank[questionNum].getCorrectAnswer()) {
+            return true;
+        }
+        return false;
+    }
+
 window.addEventListener("load", function() {
     ko.applyBindings(ViewModel);
 
     /* Event Listeners */
     $('#left_in_div div').bind("click", function() { // Jump to desired question
-        storeAnswer();
+        if (!ViewModel.grade.showGrade) {
+            storeAnswer();
+        }
+        else { ViewModel.grade.showGrade(false); }
+
         currentQuestion = $(this).text();
         updateQuestion();
+
+        // If quiz is already graded
+        if (ViewModel.grade.graded()) {
+            let radioButtons = $('input[name=question]');
+            radioButtons.parent().parent().css('background-color', 'transparent');
+
+            // if the desired question was correct
+            if (storedAnswers[$(this).text()] && storedAnswers[$(this).text()].answer === questionBank[$(this).text()].getCorrectAnswer()) {
+                //loop through radio buttons
+                for (let i = 0; i < 4; i++) {
+                    //make user choice background green
+                    if (radioButtons.next()[i].innerText === storedAnswers[$(this).text()].answer) {
+                        radioButtons.parent().parent()[i].style.backgroundColor = 'green';
+                    }
+                }
+            }
+            // user choice was incorrect
+            else { 
+                //loop through radio buttons
+                for (let i = 0; i < 4; i++) {
+                    // make user choice red
+                    if (storedAnswers[$(this).text()] && radioButtons.next()[i].innerText === storedAnswers[$(this).text()].answer) {
+                        radioButtons.parent().parent()[i].style.backgroundColor = 'red';
+                    }
+                    // make correct answer green
+                    if (radioButtons.next()[i].innerText === questionBank[$(this).text()].getCorrectAnswer()) {
+                        radioButtons.parent().parent()[i].style.backgroundColor = 'green';
+                    }
+                    
+                }
+            }
+            
+        }
     });
+
+    $('input[name=question]').change(function() { // When user checks radio button
+        storeAnswer();
+    })
 
         //Buttons
     $('#prevBtn').bind("click", function() { // Previous Button
@@ -205,8 +261,7 @@ window.addEventListener("load", function() {
     });
 
     $('#nextBtn').bind("click", function() { // Next Button
-        if (currentQuestion < 10) {
-            storeAnswer();           
+        if (currentQuestion < 10) {           
             currentQuestion++;
             updateQuestion();
         }
@@ -216,12 +271,44 @@ window.addEventListener("load", function() {
         
     });
 
-    $('#finishBtn').bind("click", function() { // Turn-in-Paper Button
-        ViewModel.done(true);
+    $('#finishBtn').bind("click", function() { // Turn-in-Paper/Back to summary Button
+        if (ViewModel.grade.graded()) { 
+            ViewModel.grade.showGrade(true);
+            return;
+        }
+        var proceed = false;
+        if (Object.keys(storedAnswers).length !== 10) {  
+            proceed = confirm('You have not answered all the questions. Would you like to continue?');
+        }
+        else { proceed = true; }
+
+        if (proceed) {
+            let summary, rank, score, correctAnswers = 0;
+            
+            ViewModel.grade.graded(true);
+            $('input[type=radio]').prop('disabled', 'disabled');
+
+            for (let i = 1; i <= 10; i++) {
+                if (checkAnswer(i)) {
+                    correctAnswers++;
+                    //change background color to green
+                    $('#quickNav' + i).css('background-color', 'rgba(0, 255, 0, .5)')
+                }
+                else {
+                    // change background color to red
+                    $('#quickNav' + i).css('background-color', 'rgba(255, 0, 0, .5)')
+                }
+            }
+            ViewModel.grade.summary('You got ' + correctAnswers + '/10 questions correct.');
+            if (correctAnswers < 6) { ViewModel.grade.rank('Beginner'); }
+            else if (correctAnswers >= 6 && correctAnswers <= 8) { ViewModel.grade.rank('Novice'); }
+            else if (correctAnswers > 8) { ViewModel.grade.rank('Expert'); }
+            ViewModel.grade.score(correctAnswers + '0%');
+            ViewModel.grade.showGrade(true);
+        }
     });
 
-    $('#backBtn').bind("click", function() { // Back to questions button //? Should we make this a reset trivia button?
-        ViewModel.done(false);      
+    $('#backBtn').bind("click", function() { // Reset Game
+        window.location = '/index_v2.html';  
     });
-
 });
