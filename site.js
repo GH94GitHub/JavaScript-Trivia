@@ -1,3 +1,12 @@
+/*============================
+; Title: Index.html JS
+; Author: George Henderson
+; Date: 25 January 2021
+; Modified By: Perry Fulfs
+; Description: Creates/populates question data structure and communicates to index via 
+; a Knockout view model.
+;============================*/
+
 var currentQuestion = 1;
 
 // 10 questions, each has {title, text, correctAnswer, multipleChoice{1-4}}
