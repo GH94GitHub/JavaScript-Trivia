@@ -6,6 +6,10 @@
  * Description: This file contains all the styles for the indes.html Homepage.
  * ***********************************/
 /*Container Patterns*/
+
+.dancing-font {
+  font-family: 'Dancing Script', cursive;
+}
 .logo {
   width:150px;
   height: auto;
@@ -34,7 +38,7 @@
   margin: 0 20px;
   padding: 10px;
   font-size: 1.45em;
-  font-family: 'Dancing Script', cursive;
+  /* font-family: 'Dancing Script', cursive; */
   width: 50%;
   font-weight: 500;
   border-radius: 15px;
@@ -52,7 +56,7 @@
 #left_div{
   background-color:rgb(148, 107, 45);
   padding: 10px;
-  font-family: 'Dancing Script', cursive;
+  /* font-family: 'Dancing Script', cursive; */
   font-weight: 500;
   border: 5px solid black;
   border-radius: 15px;
@@ -67,7 +71,7 @@
   color: white;
 }
 #multipleChoice { /* PF - edited style to be more readible */
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
   font-size: .8em;
   text-align: left;
 }
@@ -103,7 +107,7 @@ button:hover {
     grid-template-columns: auto auto auto;
     }
   .nav_item{
-    font-family: 'Dancing Script', cursive;
+    /* font-family: 'Dancing Script', cursive; */
     color: #0e1a40;
     font-size: 30px;
     text-align: center;
@@ -175,7 +179,7 @@ html {
   background-color:#5d5d5d;
 }
 html,body{
-  font-family: 'Dancing Script', cursive;
+  /* font-family: 'Dancing Script', cursive; */
   font-size:15px;
   line-height:1.5
 }
@@ -184,7 +188,7 @@ html,body{
 h1{
   font-size:36px;
   color: white;
-  font-family: 'Dancing Script', cursive;
+  /* font-family: 'Dancing Script', cursive; */
   text-align: center;
 
   text-shadow: 3px 3px 2px rgb(30, 30, 30);
@@ -192,31 +196,31 @@ h1{
 h2{
   font-size:30px;
   color: white;
-  font-family: 'Dancing Script', cursive;
+  /* font-family: 'Dancing Script', cursive; */
   text-align: center;
 }
 h3{
   font-size:24px;
   color:  white;
-  font-family: 'Dancing Script', cursive;
+  /* font-family: 'Dancing Script', cursive; */
   text-align: center;
 }
 h4{
   font-size:20px;
   color:  white;
-  font-family: 'Dancing Script', cursive;
+  /* font-family: 'Dancing Script', cursive; */
   text-align: center;
 }
 h5{
   font-size:18px;
   color:  white;
-  font-family: 'Dancing Script', cursive;
+  /* font-family: 'Dancing Script', cursive; */
   text-align: center;
 }
 h6{
   font-size:16px;
   color:  white;
-  font-family: 'Dancing Script', cursive;
+  /* font-family: 'Dancing Script', cursive; */
   text-align: center;
 }  
 
@@ -241,12 +245,22 @@ h6{
 }
 
 /* Media */
+@media only screen and (max-width: 475px) {
+  .logo {
+    display: none;
+  }
+}
+
 @media only screen and ( max-width: 700px) {
+  #right_div {
+    width: unset
+  }
   #left_in_div {
     flex-wrap: nowrap;
   }
   #left_in_div div {
     width: 15px;
+    padding: 2px;
     margin: 2px;
     flex:1 0 6%;
   }
@@ -263,10 +277,5 @@ h6{
   #title {
     width: 75%;
     margin: auto;
-  }
-}
-@media only screen and (max-width: 1120px) {
-  .logo {
-    width: 100px;
   }
 }
